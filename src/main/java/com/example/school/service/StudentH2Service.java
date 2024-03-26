@@ -50,8 +50,8 @@ public class StudentH2Service implements StudentRepository {
     @Override
     public String addMultipleStudents(ArrayList<Student> studentsList) {
         for (Student eachStudent : studentsList) {
-            db.update("insert into students(studentName.gender,standard) values (?,?,?)", eachStudent.getStudentName(),
-                    eachStudent.getGender().eachStudent.getStandard());
+            db.update("insert into students(studentName,gender,standard) values (?,?,?)", eachStudent.getStudentName(),
+                    eachStudent.getGender(),eachStudent.getStandard());
         }
         String responseMessage = String.format("Successfully added %d students", studentsList.size());
         return responseMessage;
