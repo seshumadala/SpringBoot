@@ -11,7 +11,7 @@ public class StudentRowMapper implements RowMapper<Student> {
         return new Student(
                 rs.getInt("studentId"),
                 rs.getString("studentName"),
-                rs.getString("Gender"),
-                rs.getInt("Standard"));
+                rs.getString("gender"),
+                rs.getInt("standard"));
     }
 }
